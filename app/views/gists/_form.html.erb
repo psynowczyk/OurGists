@@ -34,8 +34,15 @@
     
     <div class="form-group">
         <div class="btn-group btn-group-lg">
-            <%= f.submit "Create", class: "btn btn-success" %>
+            <% if @gist.persisted? %>
+                <%= f.submit "Edit", class: "btn btn-success" %>
+            <% else %>
+                <%= f.submit "Create", class: "btn btn-success" %>
+            <% end %>
             <%= link_to 'Back', gists_path, class: 'btn btn-danger' %>
+            <% if @gist.persisted? %>
+                <%= link_to 'Show', @gist, class: 'btn btn-info' %>
+            <% end %>
         </div>
     </div>
   </div>
