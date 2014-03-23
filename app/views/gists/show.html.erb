@@ -12,4 +12,5 @@
   <%= @gist.description %>
 </p>
 <%= link_to 'Edit', edit_gist_path(@gist) %> |
-<%= link_to 'Back', gists_path %>
+<%= link_to 'Back', gists_path %> |
+<%= link_to 'Destroy', @gist, method: :delete, data: { confirm: 'Are you sure?' } %>
