@@ -1,31 +1,32 @@
-<h1>Listing gists</h1>
+<div class="container">
+    <div class="page-header">
+        <h1>Gists list</h1>
+    </div>
+    
+    <div class="table-responsie">
+        <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th class="col-sm-1">Id</th>
+                  <th class="col-sm-1">Language</th>
+                  <th class="col-sm-1">Description</th>
+                  <th class="col-sm-10">Snippet</th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Snippet</th>
-      <th>Lang</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+          <tbody>
+            <% @gists.each do |gist| %>
+                <tr>
+                    <td><%= link_to gist.id, gist %></td>
+                    <td><%= link_to gist.lang, gist %></td>
+                    <td><%= link_to gist.description, gist %></td>
+                    <td><%= link_to gist.snippet, gist %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+    <br>
 
-  <tbody>
-    <% @gists.each do |gist| %>
-      <tr>
-        <td><%= gist.snippet %></td>
-        <td><%= gist.lang %></td>
-        <td><%= gist.description %></td>
-        <td><%= link_to 'Show', gist %></td>
-        <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Gist', new_gist_path %>
+    <%= link_to 'New Gist', new_gist_path, class: 'btn btn-large btn-default' %>
+</div>
