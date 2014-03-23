@@ -1,4 +1,4 @@
-<%= form_for(@gist) do |f| %>
+<%= form_for @gist, html: {class: "form-horizontal"} do |f| %>
   <% if @gist.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
@@ -11,19 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :snippet %><br>
-    <%= f.text_area :snippet %>
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon">Snippet</span>
+        <%= f.text_area :snippet, rows: 10, class: "form-control", placeholder: "Paste sample code here" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :lang %><br>
-    <%= f.select :lang, Pygments.lexers.keys.sort.map! {|l| l.downcase.strip} %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+    <div class="form-group">
+      <div class="input-group">
+          <span class="input-group-addon">Description</span>
+          <%= f.text_field :description, class: "form-control", placeholder: "Simple description of your gist" %>
+      </div>
+    </div>
+ 
+    <div class="form-group">
+      <div class="input-group col-sm-2">
+          <span class="input-group-addon">Language</span>
+          <%= f.select :lang, Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, {}, class: "form-control" %>
+      </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="btn-group btn-group-lg">
+            <%= f.submit "Create", class: "btn btn-success" %>
+            <%= link_to 'Back', gists_path, class: 'btn btn-danger' %>
+        </div>
+    </div>
   </div>
 <% end %>
