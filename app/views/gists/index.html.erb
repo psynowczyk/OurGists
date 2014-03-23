@@ -20,7 +20,15 @@
                     <td><%= link_to gist.id, gist %></td>
                     <td><%= link_to gist.lang, gist %></td>
                     <td><%= link_to gist.description, gist %></td>
-                    <td><%= link_to gist.snippet, gist %></td>
+                    <%
+                        if gist.snippet.lines.count > 3
+                            my_string = gist.snippet.lines[0,3].join
+                            my_string += "..."
+                        else
+                            my_string = gist.snippet
+                        end
+                    %>
+                    <td><%= raw Pygments.highlight(my_string, lexer: gist.lang) %></td>
               </tr>
             <% end %>
           </tbody>
