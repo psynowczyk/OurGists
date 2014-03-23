@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Lang:</strong>
+  <%= @gist.lang %>
+</p>
+<p>
+  <strong>Snippet:</strong>
+</p>
+<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
+<p>
+  <strong>Description:</strong>
+  <%= @gist.description %>
+</p>
+<%= link_to 'Edit', edit_gist_path(@gist) %> |
+<%= link_to 'Back', gists_path %>
