@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :lang %><br>
-    <%= f.text_field :lang %>
+    <%= f.select :lang, Pygments.lexers.keys.sort.map! {|l| l.downcase.strip} %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
