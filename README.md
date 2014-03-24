@@ -4,7 +4,7 @@
 * poprawiłem wszystkie widoki (bootstrap + kilka własnych, drobnych modyfikacji),
 * kolorowanie kodu na stronie głównej + ucinanie długich linijek,
 * powiększyłem textarea dla odpowiednich widoków,
-* w widoku wszystkich gistów, po najechaniu na jakiś gist zmienia się hover oraz można na niego kliknąć, po czym zostaniemy przeniesieni na odpowiednią stronę (rozwiązane za pomocą: jquery + css),
+* w widoku wszystkich gistów, po najechaniu na jakiś gist zmienia się hover oraz można na niego kliknąć, po czym zostaniemy przeniesieni na odpowiednią stronę (~~rozwiązane za pomocą: jquery + css~~ css + onclick due to problems with turbolinks),
 * wdrożenie na heroku,
 * kilka innych, drobnych zmian (wszystko w commitach).
 
