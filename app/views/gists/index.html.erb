@@ -23,9 +23,9 @@
           <tbody>
             <% @gists.each do |gist| %>
                 <tr class="rowlink" data-link="/gists/<%= gist.id %>">
-                    <td><%= link_to gist.id, gist %></td>
-                    <td><%= link_to gist.lang, gist %></td>
-                    <td><%= link_to gist.description, gist %></td>
+                    <td><%= gist.id %></td>
+                    <td><%= gist.lang %></td>
+                    <td><%= gist.description %></td>
                     <%
                         if gist.snippet.lines.count > 3
                             my_string = gist.snippet.lines[0,3].join
