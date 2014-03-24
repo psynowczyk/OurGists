@@ -22,7 +22,7 @@
 
           <tbody>
             <% @gists.each do |gist| %>
-                <tr class="rowlink" data-link="/gists/<%= gist.id %>">
+                <tr class="rowlink" onclick="window.document.location='/gists/<%= gist.id %>'">
                     <td><%= gist.id %></td>
                     <td><%= gist.lang %></td>
                     <td><%= gist.description %></td>
