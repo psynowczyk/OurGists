@@ -31,5 +31,10 @@ tr.rowlink td {
 }
 
 .table tbody tr.rowlink:hover td {
-  background-color: #cfcfcf;
+    background-color: #cfcfcf;
+}
+
+td {
+    word-wrap:break-word;
+    word-break:break-word;
 }
