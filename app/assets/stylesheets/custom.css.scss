@@ -25,3 +25,11 @@ a.btn.btn-info {
 a.btn.btn-success {
     color: white;
 }
+
+tr.rowlink td {
+    cursor: pointer;
+}
+
+.table tbody tr.rowlink:hover td {
+  background-color: #cfcfcf;
+}
