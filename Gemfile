@@ -52,3 +52,5 @@ group :production do
 end
 
 gem 'sqlite3', group: [:development, :test]
+
+gem 'will_paginate', '~> 3.0'
