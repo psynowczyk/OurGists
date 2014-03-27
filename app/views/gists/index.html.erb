@@ -41,6 +41,15 @@
         </table>
     </div>
 
+    <div class="apple_pagination">
+        <div class="page_info">
+            <%= page_entries_info @gists %>
+        </div>
+        <%= will_paginate @gists, :container => false %>
+    </div>
+
+    <br/>
+
     <div class="form-group">
         <div class="btn-group btn-group-lg">
             <%= link_to 'New Gist', new_gist_path, class: 'btn btn-large btn-success' %>
