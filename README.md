@@ -7,6 +7,7 @@
 * w widoku wszystkich gistów, po najechaniu na jakiś gist zmienia się hover oraz można na niego kliknąć, po czym zostaniemy przeniesieni na odpowiednią stronę (~~rozwiązane za pomocą: jquery + css~~ css + onclick due to problems with turbolinks),
 * dodałem limit znaków dla description (80) + word wrapping dla niego (css),
 * dodałem obsługę paginacji (gem will_paginate),
+* dodałem obsługę infinity scrolling z dużą ilością własnych modyfikacji w kodzie,
 * wdrożenie na heroku,
 * kilka innych, drobnych zmian (wszystko w commitach).
 
