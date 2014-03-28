@@ -28,7 +28,7 @@
     <div class="form-group">
       <div class="input-group col-sm-3">
           <span class="input-group-addon">Language</span>
-          <%= f.select :lang, Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, {}, class: "form-control" %>
+          <%= f.select :lang, Pygments.lexers.map{|key, value| [ value[:name], value[:aliases][0] ] }, {}, class: "form-control" %>
       </div>
     </div>
     
