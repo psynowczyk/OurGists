@@ -1,0 +1,2 @@
+$('#my-gists').append('<%= j render @gists %>');
+$('.pagination').replaceWith('<%= j will_paginate @gists, renderer: BootstrapPagination::Rails %>');
