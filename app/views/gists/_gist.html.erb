@@ -1,0 +1,14 @@
+<tr class="rowlink" onclick="window.document.location='/gists/<%= gist.id %>'">
+    <td><%= gist.id %></td>
+    <td><%= gist.lang %></td>
+    <td><%= gist.description %></td>
+    <%
+        if gist.snippet.lines.count > 3
+            my_string = gist.snippet.lines[0,3].join
+            my_string += "..."
+        else
+            my_string = gist.snippet
+        end
+    %>
+    <td><%= raw Pygments.highlight(my_string, lexer: gist.lang) %></td>
+</tr>

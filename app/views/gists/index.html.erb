@@ -20,32 +20,14 @@
             </tr>
           </thead>
 
-          <tbody>
-            <% @gists.each do |gist| %>
-                <tr class="rowlink" onclick="window.document.location='/gists/<%= gist.id %>'">
-                    <td><%= gist.id %></td>
-                    <td><%= gist.lang %></td>
-                    <td><%= gist.description %></td>
-                    <%
-                        if gist.snippet.lines.count > 3
-                            my_string = gist.snippet.lines[0,3].join
-                            my_string += "..."
-                        else
-                            my_string = gist.snippet
-                        end
-                    %>
-                    <td><%= raw Pygments.highlight(my_string, lexer: gist.lang) %></td>
-              </tr>
-            <% end %>
+          <tbody id="my-gists">
+            <%= render @gists %>
           </tbody>
         </table>
     </div>
 
-    <div class="apple_pagination">
-        <div class="page_info">
-            <%= page_entries_info @gists %>
-        </div>
-        <%= will_paginate @gists, :container => false %>
+    <div id="infinite-scrolling">
+        <%= will_paginate @gists, renderer: BootstrapPagination::Rails %>
     </div>
 
     <br/>
