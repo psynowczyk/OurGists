@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+# tHIS FIle should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -253,7 +253,7 @@ my_gists = [
     ["BEGIN { print \"Hello, world!\" }", "awk", "Hello World example in AWK language (from wiki)."],
     ["@echo Hello, world!", "bat", "Hello World example in Batch file (from wiki)."],
     [">25*\"!dlrow ,olleH\":v\n\t\t\t\tv:,_@\n\t\t\t\t>  ^", "befunge", "Hello World example in Befunge language (from wiki)."],
-    ["using System;\nclass Program\n{\n\tpublic static void Main()\n{\n\t\tConsole.WriteLine(\"Hello, world!\");\n\t}\n}", "c#", "Hello World example in C# (from wiki)." ],
+    ["using System;\nclass Program\n{\n\tpublic static void Main()\n{\n\t\tConsole.WriteLine(\"Hello, world!\");\n\t}\n}", "csharp", "Hello World example in C# (from wiki)." ],
     ["void hello() {\n\tprint(\"Hello, World!\");\n}", "ceylon", "Hello World example in Ceylon language (from wiki)."],
     ["alert 'Hello, world!'", "coffee-script", "Hello World example in CoffeScript (from wiki)."],
     ["console.log 'Hello, world!'", "coffee-script", "Hello World example in CoffeeScript (from wiki)."],
