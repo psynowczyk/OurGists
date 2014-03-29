@@ -31,6 +31,10 @@
         <% end %>
     </div>
 
+    <div id="infinite-scrolling">
+        <%= will_paginate @gists, renderer: BootstrapPagination::Rails %>
+    </div>
+
     <div class="table-responsie">
         <table class="table table-striped table-bordered">
           <thead>
