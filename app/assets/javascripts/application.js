@@ -15,6 +15,8 @@
 //= require_tree .
 //= require bootstrap
 
+var isActive = false;
+
 jQuery(function($) {
     $("tr[data-link]").click(function() {
         window.location = this.dataset.link
