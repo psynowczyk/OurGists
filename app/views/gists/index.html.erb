@@ -1,12 +1,34 @@
 <div class="container">
     <div class="page-header">
-        <h1>Gists list</h1>
+        <h1><%= link_to "Gists list", "/" %></h1>
     </div>
 
     <div class="form-group">
         <div class="btn-group btn-group-lg">
             <%= link_to 'New Gist', new_gist_path, class: 'btn btn-large btn-success' %>
+            <%= content_tag "a", 'Search', class: 'btn btn-large btn-info', "data-toggle" => "collapse", "data-target" => "#view_search" %>
         </div>
+    </div>
+    <div class="form-group collapse" id="view_search">
+        <%= form_tag @gist, :method => 'get' do %>
+            <div class="input-group">
+                <span class="input-group-addon">Snippet</span>
+                <%= text_field_tag :snippet_search, params[:snippet_search], class: "form-control", placeholder: "Empty for all characters" %>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">Description</span>
+                <%= text_field_tag :desc_search, params[:desc_search], class: "form-control", placeholder: "Empty for all characters" %>
+            </div>
+            <div class="input-group col-sm-3">
+                <span class="input-group-addon">Language</span>
+                <%= select_tag :lang_search, options_for_select(Pygments.lexers.map{|key, value| [ value[:name], value[:aliases][0] ] }), include_blank: true, class: "form-control" %>
+            </div>
+            <div class="input-group">
+                <div class="btn-group btn-group-lg">
+                    <%= submit_tag "Submit", :type => "submit", class: "btn btn-info" %>
+                </div>
+            </div>
+        <% end %>
     </div>
 
     <div class="table-responsie">
