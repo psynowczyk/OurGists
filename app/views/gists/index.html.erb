@@ -21,7 +21,7 @@
             </div>
             <div class="input-group col-sm-3">
                 <span class="input-group-addon">Language</span>
-                <%= select_tag :lang_search, options_for_select(Pygments.lexers.map{|key, value| [ value[:name], value[:aliases][0] ] }), include_blank: true, class: "form-control" %>
+                <%= select_tag :lang_search, options_for_select(Pygments.lexers.sort.map{|key, value| [ value[:name], value[:aliases][0] ] }), include_blank: true, class: "form-control" %>
             </div>
             <div class="input-group">
                 <div class="btn-group btn-group-lg">
