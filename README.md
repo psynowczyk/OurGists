@@ -7,8 +7,13 @@
 * w widoku wszystkich gistów, po najechaniu na jakiś gist zmienia się hover oraz można na niego kliknąć, po czym zostaniemy przeniesieni na odpowiednią stronę (~~rozwiązane za pomocą: jquery + css~~ css + onclick due to problems with turbolinks),
 * dodałem limit znaków dla description (80) + word wrapping dla niego (css),
 * dodałem obsługę paginacji (gem will_paginate),
-* dodałem obsługę infinity scrolling z dużą ilością własnych modyfikacji w kodzie,
+* dodałem obsługę infinity scrolling z dużą ilością własnych modyfikacji w kodzie (podany poradnik na zajęciach jest niekompletny),
+* dodałem obsługę wyszukiwania:
+ - form wyszukiwania standardowo jest ukryty - jest rozwijany po kliknięciu na przycisk (css),
+ - wyszukiwanie działa na stronie głównej, razem z paginacją i infinity scrolling,
+ - można wyszukiwać na podstawie treści snippeta, description i języka wrzutki,
+ - wyszukiwanie jest zrobione dość 'cwanie' (mam ten sam widok dla wszystkich gistów i dla wyszukiwanych),
 * wdrożenie na heroku,
-* kilka innych, drobnych zmian (wszystko w commitach).
+* kilka innych, drobnych zmian i bug fixów (wszystko w commitach).
 
 Link do działającej aplikacji na Heroku: http://damlab.herokuapp.com
