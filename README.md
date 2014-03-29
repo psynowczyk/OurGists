@@ -14,6 +14,7 @@
  - można wyszukiwać na podstawie treści snippeta, description i języka wrzutki,
  - wyszukiwanie jest zrobione dość 'cwanie' (mam ten sam widok dla wszystkich gistów i dla wyszukiwanych),
 * dodałem sporo przykładowych rekordów do bazy danych via db/seeds.rb (większość rekordów to przykłady 'Hello World' w danych językach, nawet w kilku wersjach),
+* infinity scrolling: poprawiłem problem z kilkukrotnym ładowaniem się gistów w przypadku szybkiego scrollowania,
 * wdrożenie na heroku,
 * kilka innych, drobnych zmian i bug fixów (wszystko w commitach).
 
