@@ -15,6 +15,7 @@
  - wyszukiwanie jest zrobione dość 'cwanie' (mam ten sam widok dla wszystkich gistów i dla wyszukiwanych),
 * dodałem sporo przykładowych rekordów do bazy danych via db/seeds.rb (większość rekordów to przykłady 'Hello World' w danych językach, nawet w kilku wersjach),
 * naprawiłem problem z kilkukrotnym ładowaniem się tych samych gistów w przypadku szybkiego scrollowania (infinity scrolling),
+* naprawiłem błąd "ArgumentError: invalid byte sequence in UTF-8" (gem utf8-cleaner),
 * wdrożenie na heroku,
 * kilka innych, drobnych zmian i bug fixów (wszystko w commitach).
 
