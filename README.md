@@ -20,7 +20,7 @@
 * wdrożenie na heroku,
 * kilka innych, drobnych zmian i bug fixów (wszystko w commitach).
 
-## Niestandardowe Gemy
+### Niestandardowe Gemy
 
 * pygments.rb,
 * bootstrap-sass,
