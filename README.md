@@ -20,4 +20,14 @@
 * wdrożenie na heroku,
 * kilka innych, drobnych zmian i bug fixów (wszystko w commitach).
 
+## Niestandardowe Gemy
+
+* pygments.rb,
+* bootstrap-sass,
+* pg (produkcja - Heroku),
+* rails_12factor (produkcja - Heroku),
+* will_paginate,
+* will_paginate-bootstrap,
+* utf8-cleaner.
+
 Link do działającej aplikacji na Heroku: http://damlab.herokuapp.com
