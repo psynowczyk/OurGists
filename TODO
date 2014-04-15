@@ -1,0 +1,30 @@
+Co na pewno trzeba zrobić:
+a) dopisać testy,
+b) dopisać widok wyszukiwania (wyszukiwarka nie jest osobnym widokiem),
+c) dopisać logowanie (minimum Facebook i GitHub),
+d) poprawić wszystkie strony, tak aby poprawnie wyświetlały się na każdej, nowej przeglądarce,
+e) ewentualne dalsze usprawnienia względem widoków (css - bootstrap).
+
+Dodatkowo proponuję (jeśli starczy czasu):
+1) captcha,
+2) prywatne gisty (związane z pkt. c),
+3) charts (wykresy, statystyki, etc.).
+
+Kolejność nie jest przypadkowa :).
+
+Podzielmy się zadaniami (co kto chce robić). Możemy się również pozamieniać.
+
+Kaka':
+ - logowanie,
+ - captcha,
+ - widok wyszukiwania.
+
+Jacek:
+ - null.
+
+Piotr:
+ - null.
+
+
+Jak pracujemy?
+Pull requests/branch. Zalecam osobny branch, tak aby prowadzący łatwo mógł sprawdzić co kto zrobił.
