@@ -1,4 +1,15 @@
-### My Gists - Lista zmian
+## My Gists - kontynuacja projektu.
+
+Nazwa zespołu: *None*
+
+Członkowie:
+- Damian Labuda,
+- Jacek Sikora,
+- Piotr Synowczyk.
+
+
+
+### Poprzednie README.md (zaliczenie laboratoriów)
 
 * Dodałem select z językami do wyboru podczas tworzenia nowego gist'a,
 * poprawiłem wszystkie widoki (bootstrap + kilka własnych, drobnych modyfikacji),
