@@ -17,10 +17,11 @@ Podzielmy się zadaniami (co kto chce robić). Możemy się również pozamienia
 Kaka':
  - logowanie,
  - captcha,
- - widok wyszukiwania.
+ 
 
 Jacek:
- - null.
+ - widok wyszukiwania,
+ - testy
 
 Piotr:
  - poprawić wszystkie strony, tak aby poprawnie wyświetlały się na każdej, nowej przeglądarce
