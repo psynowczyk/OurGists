@@ -1,4 +1,5 @@
 MyGists::Application.routes.draw do
+ 
   resources :gists
 
   # The priority is based upon order of creation: first created -> highest priority.
