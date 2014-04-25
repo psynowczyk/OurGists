@@ -1,10 +1,15 @@
-class GistsController < ApplicationController
-  before_action :set_gist, only: [:show, :edit, :update, :destroy]
+class SearchController < ApplicationController
+ 
+  before_action :set_gist
 
   # GET /gists
   # GET /gists.json
   def index
-    @gists = Gist.search(params[:snippet_search],params[:desc_search],params[:lang_search],params[:page])
+    @gists = Gist.paginate(:page => params[:page], :per_page => 10, :conditions => ['snippet LIKE ? AND description LIKE ? AND lang LIKE ?', "%#{params[:snippet_search]}%", "%#{params[:desc_search]}%", "%#{params[:lang_search]}%"], :order => 'updated_at DESC')
+    respond_to do |format|
+        format.html
+        format.js
+    end
   end
 
   # GET /gists/1
@@ -64,7 +69,7 @@ class GistsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_gist
-      @gist = Gist.find(params[:id])
+      @gist = Gist.find(:all)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

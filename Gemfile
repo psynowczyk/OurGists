@@ -56,3 +56,4 @@ gem 'sqlite3', group: [:development, :test]
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'utf8-cleaner'
+gem 'rspec-rails'
