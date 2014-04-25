@@ -5,6 +5,10 @@ class GistsController < ApplicationController
   # GET /gists.json
   def index
     @gists = Gist.search(params[:snippet_search],params[:desc_search],params[:lang_search],params[:page])
+    respond_to do |format|
+       format.html
+       format.js
+    end
   end
 
   # GET /gists/1
