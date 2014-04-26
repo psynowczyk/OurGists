@@ -7,9 +7,39 @@ Członkowie:
 - Jacek Sikora,
 - Piotr Synowczyk.
 
+Link do działającej aplikacji na Heroku: http://damlab.herokuapp.com
+
+Projekt ten jest kontynuacją projektu z zaliczenia laboratoriów (tym razem pracujemy w grupie).
+
+Aby rozróżnić rzeczy, które były zrobione przed projektem na egzamin, pozostawiam w tym README.md poprzednie zapisy.
+
+Udział poszczególnych osób można śledzić na remote branchach. Poniżej skrócony opis dzieła każdego z nas.
 
 
-### Poprzednie README.md (zaliczenie laboratoriów)
+### Damian Labuda
+
+#### Logowanie
+* dodałem logowanie użytkowników za pomocą zewnętrznych serwisów:
+ - Facebook,
+ - GitHub,
+ - Google,
+* logowanie zrealizowane jest za pomocą OAuth,
+* użyte niestandardowe gemy do obsługi logowania:
+ - omniauth,
+ - omniauth-facebook,
+ - omniauth-github,
+ - omniauth-google-oauth2.
+
+
+### Jacek Sikora
+-
+
+
+### Piotr Synowczyk
+-
+
+
+## Poprzednie README.md (zaliczenie laboratoriów)
 
 * Dodałem select z językami do wyboru podczas tworzenia nowego gist'a,
 * poprawiłem wszystkie widoki (bootstrap + kilka własnych, drobnych modyfikacji),
@@ -52,5 +82,3 @@ Członkowie:
 * will_paginate,
 * will_paginate-bootstrap,
 * utf8-cleaner.
-
-Link do działającej aplikacji na Heroku: http://damlab.herokuapp.com
