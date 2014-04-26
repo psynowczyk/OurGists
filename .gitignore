@@ -14,3 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Script for setting api keys for omniauth authentication
+set_apps_keys.sh
