@@ -57,3 +57,12 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'utf8-cleaner'
 gem 'rspec-rails'
+
+# Facebook auth
+gem 'omniauth-facebook'
+
+# GitHub auth
+gem 'omniauth-github'
+
+# Google auth
+gem 'omniauth-google-oauth2'
