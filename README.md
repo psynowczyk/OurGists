@@ -39,7 +39,7 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
 * użyte niestandardowe gemy do obsługi recaptcha:
  - recaptcha,
  - bcrypt-ruby,
-* user musi wprowadzić reCAPTCHA aby dodać i/lub edytować gist.
+* user musi wprowadzić reCAPTCHA aby dodać nowy gist (jeśli nie jest zalogowany).
 
 
 ### Jacek Sikora
