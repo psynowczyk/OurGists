@@ -33,12 +33,22 @@ class GistsController < ApplicationController
     captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
 
     respond_to do |format|
-      if verify_recaptcha(:model => @gist, :message => captcha_message) && @gist.save
-        format.html { redirect_to @gist, notice: 'Gist was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @gist }
+      if current_user
+        if @gist.save
+            format.html { redirect_to @gist, notice: 'Gist was successfully created.' }
+            format.json { render action: 'show', status: :created, location: @gist }
+        else
+            format.html { render action: 'new' }
+            format.json { render json: @gist.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render action: 'new' }
-        format.json { render json: @gist.errors, status: :unprocessable_entity }
+        if verify_recaptcha(:model => @gist, :message => captcha_message) && @gist.save
+            format.html { redirect_to @gist, notice: 'Gist was successfully created.' }
+            format.json { render action: 'show', status: :created, location: @gist }
+        else
+            format.html { render action: 'new' }
+            format.json { render json: @gist.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -46,9 +56,8 @@ class GistsController < ApplicationController
   # PATCH/PUT /gists/1
   # PATCH/PUT /gists/1.json
   def update
-    captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
     respond_to do |format|
-      if verify_recaptcha(:model => @gist, :message => captcha_message) && @gist.update(gist_params)
+      if @gist.update(gist_params)
         format.html { redirect_to @gist, notice: 'Gist was successfully updated.' }
         format.json { head :no_content }
       else
