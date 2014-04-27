@@ -30,9 +30,10 @@ class GistsController < ApplicationController
   # POST /gists.json
   def create
     @gist = Gist.new(gist_params)
+    captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
 
     respond_to do |format|
-      if @gist.save
+      if verify_recaptcha(:model => @gist, :message => captcha_message) && @gist.save
         format.html { redirect_to @gist, notice: 'Gist was successfully created.' }
         format.json { render action: 'show', status: :created, location: @gist }
       else
@@ -45,8 +46,9 @@ class GistsController < ApplicationController
   # PATCH/PUT /gists/1
   # PATCH/PUT /gists/1.json
   def update
+    captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
     respond_to do |format|
-      if @gist.update(gist_params)
+      if verify_recaptcha(:model => @gist, :message => captcha_message) && @gist.update(gist_params)
         format.html { redirect_to @gist, notice: 'Gist was successfully updated.' }
         format.json { head :no_content }
       else
