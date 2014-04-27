@@ -28,7 +28,11 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
  - omniauth,
  - omniauth-facebook,
  - omniauth-github,
- - omniauth-google-oauth2.
+ - omniauth-google-oauth2,
+* dodałem static_pages controller z dwoma widokami (login_required i login_failed),
+* dodałem restrykcje dla niezalogowanych użytkowników (na poziomie controllerów oraz widoków):
+ - nie mogą edytować gistów,
+ - nie mogą usuwać gistów.
 
 
 ### Jacek Sikora
