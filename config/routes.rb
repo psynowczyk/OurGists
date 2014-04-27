@@ -1,5 +1,7 @@
 MyGists::Application.routes.draw do
  
+  get "static_pages/login_required"
+  get "static_pages/login_failed"
   resources :gists
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,8 +12,7 @@ MyGists::Application.routes.draw do
   root 'gists#index'
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-  # TODO, redirect to fail view
-  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'auth/failure', to: 'static_pages#login_failed', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   # Example of regular route:

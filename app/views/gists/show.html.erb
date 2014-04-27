@@ -29,9 +29,13 @@
 
         <div class="form-group">
             <div class="btn-group btn-group-lg">
-                <%= link_to 'Edit', edit_gist_path(@gist), class: "btn btn-success" %> 
-                <%= link_to 'Back', gists_path, class: "btn btn-danger" %>
-                <%= link_to 'Destroy', @gist, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %>
+                <% if current_user %>
+                    <%= link_to 'Edit', edit_gist_path(@gist), class: "btn btn-success" %> 
+                    <%= link_to 'Back', gists_path, class: "btn btn-danger" %>
+                    <%= link_to 'Destroy', @gist, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %>
+                <% else %>
+                    <%= link_to 'Back', gists_path, class: "btn btn-danger" %>
+                <% end %>
             </div>
         </div>
     <% end %>
