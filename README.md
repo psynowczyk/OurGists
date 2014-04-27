@@ -34,6 +34,13 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
  - nie mogą edytować gistów,
  - nie mogą usuwać gistów.
 
+#### reCAPTCHA
+* dodałem obsługę reCAPTCHA,
+* użyte niestandardowe gemy do obsługi recaptcha:
+ - recaptcha,
+ - bcrypt-ruby,
+* user musi wprowadzić reCAPTCHA aby dodać i/lub edytować gist.
+
 
 ### Jacek Sikora
 -
