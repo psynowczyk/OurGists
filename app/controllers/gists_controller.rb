@@ -1,6 +1,7 @@
 class GistsController < ApplicationController
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :require_login, :only => [:show, :index, :new, :create]
+  
   # GET /gists
   # GET /gists.json
   def index
