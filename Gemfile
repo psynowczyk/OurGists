@@ -66,3 +66,7 @@ gem 'omniauth-github'
 
 # Google auth
 gem 'omniauth-google-oauth2'
+
+# reCaptcha
+gem 'recaptcha'
+gem 'bcrypt-ruby'
