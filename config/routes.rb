@@ -2,6 +2,7 @@ MyGists::Application.routes.draw do
  
   get "static_pages/login_required"
   get "static_pages/login_failed"
+  match "gist/stats", to: "gists#stats", via: [:get, :post]
   resources :gists
 
   # The priority is based upon order of creation: first created -> highest priority.

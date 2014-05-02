@@ -1,0 +1,47 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+<div class="container">
+    <div class="page-header">
+        <h1>Gists stats</h1>
+    </div>
+
+    <h3>Generic stats</h3>
+    All gists: <span class="label label-default"><%= Gist.count %></span>
+    <br/>
+    All used languages: <span class="label label-default"><%= Gist.group(:lang).count.count %></span>
+    <br/>
+    <%
+        len = 0
+        Gist.all.each do |g|
+            len += g.snippet.length
+        end
+    %>
+    Average snippet length: <span class="label label-default"><%= len / Gist.count %></span> characters
+    <br/>
+    <% ile = 3 %>
+    The <%= ile %> most popular languages:
+    <ul>
+        <% Hash[Gist.group(:lang).count.sort_by{|k, v| v}.reverse[0..ile - 1]].each do |g| %>
+            <li>
+            <%= link_to g[0], "/gists?lang_search=" + g[0] %>
+            <span class="badge"><%= g[1] %></span>
+            </li>
+        <% end %>
+    </ul>
+    <br/>
+    <h3>Language stats</h3>
+    <hr>
+    <h4>All languages</h4>
+    <%= pie_chart Gist.group(:lang).count %>
+    <h4>Top 10 languages</h4>
+    <%= pie_chart Hash[Gist.group(:lang).count.sort_by{|k, v| v}.reverse[0..9]] %>
+    
+    <% if Rails.env.production? %>
+        <h3>Creating stats</h3>
+        <hr>
+        <h4>Grouping by day</h4>
+        <%= line_chart Gist.group_by_day(:created_at).count %>
+        <h4>Grouping by month</h4>
+        <%= column_chart Gist.group_by_month(:created_at).count %>
+
+    <% end %>
+</div>
