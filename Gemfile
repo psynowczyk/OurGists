@@ -70,3 +70,7 @@ gem 'omniauth-google-oauth2'
 # reCaptcha
 gem 'recaptcha'
 gem 'bcrypt-ruby'
+
+# Wykresy
+gem 'chartkick'
+gem 'groupdate'

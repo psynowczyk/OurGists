@@ -8,6 +8,10 @@
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
+        <div class="btn-group btn-group-lg">
+            <%= link_to "Back to Home", root_url, class: "btn btn-default navbar-btn" %>
+            <%= link_to "Stats", "/gist/stats/", class: "btn btn-default navbar-btn" %>
+        </div>
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <% if current_user %>

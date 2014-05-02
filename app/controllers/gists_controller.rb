@@ -1,6 +1,6 @@
 class GistsController < ApplicationController
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :require_login, :only => [:show, :index, :new, :create]
+  skip_before_filter :require_login, :only => [:show, :index, :new, :create, :stats]
   
   # GET /gists
   # GET /gists.json
@@ -15,6 +15,9 @@ class GistsController < ApplicationController
   # GET /gists/1
   # GET /gists/1.json
   def show
+  end
+
+  def stats
   end
 
   # GET /gists/new
