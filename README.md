@@ -41,6 +41,13 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
  - bcrypt-ruby,
 * user musi wprowadzić reCAPTCHA aby dodać nowy gist (jeśli nie jest zalogowany).
 
+#### Statystyki
+* dodałem widok statystyk dla gistów,
+* statystyki są zrealizowane za pomocą dwóch gemów:
+ - chartkick,
+ - groupdate,
+* widok statystyk nie wymaga logowania.
+
 
 ### Jacek Sikora
 -
