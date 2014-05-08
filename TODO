@@ -6,7 +6,8 @@ c) ewentualne dalsze usprawnienia względem widoków (css - bootstrap):
  - button logowanie na pewno w skrajnym prawym rogu.
 
 Jacek:
- - testy
+ - testy,
+ - travis.
 
 Piotr:
  - poprawić wszystkie strony, tak aby poprawnie wyświetlały się na każdej, nowej przeglądarce
