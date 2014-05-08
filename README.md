@@ -24,7 +24,7 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
  - GitHub,
  - Google,
 * logowanie zrealizowane jest za pomocą OAuth,
-* użyte niestandardowe gemy do obsługi logowania:
+* użyte gemy do obsługi logowania:
  - omniauth,
  - omniauth-facebook,
  - omniauth-github,
@@ -36,7 +36,7 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
 
 #### reCAPTCHA
 * dodałem obsługę reCAPTCHA,
-* użyte niestandardowe gemy do obsługi recaptcha:
+* użyte gemy do obsługi recaptcha:
  - recaptcha,
  - bcrypt-ruby,
 * user musi wprowadzić reCAPTCHA aby dodać nowy gist (jeśli nie jest zalogowany).
