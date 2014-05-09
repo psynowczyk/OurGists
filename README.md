@@ -1,5 +1,7 @@
 ## My Gists - kontynuacja projektu.
 
+[![Build Status](https://travis-ci.org/kaka2991/my_gists.svg)](https://travis-ci.org/kaka2991/my_gists)
+
 Nazwa zespołu: *None*
 
 Członkowie:
