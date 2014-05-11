@@ -5,6 +5,10 @@ c) ewentualne dalsze usprawnienia względem widoków (css - bootstrap):
  - obowiązkowo trzeba coś zrobić z widokiem navbaru (aktualny nie jest dopracowany),
  - button logowanie na pewno w skrajnym prawym rogu.
 
+Kaka':
+- ustawić na sztywno wersje gemów,
+- dodać więcej przykładowych rekordów (z różnymi datami, aby było widać ładnie statystyki).
+
 Jacek:
  - testy,
  - travis.
