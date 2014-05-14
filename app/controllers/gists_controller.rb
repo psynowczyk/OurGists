@@ -32,7 +32,7 @@ class GistsController < ApplicationController
   # POST /gists
   # POST /gists.json
   def create
-    @gist = Gist.new(gist_params)
+    @gist = @user.Gist.new(gist_params)
     captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
 
     respond_to do |format|
