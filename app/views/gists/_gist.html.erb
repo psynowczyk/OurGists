@@ -1,6 +1,6 @@
 <tr class="rowlink" onclick="window.document.location='/gists/<%= gist.id %>'">
     <td><%= gist.id %></td>
-    
+    <td><%= gist.user_id %></td>
     <td><%= Pygments.lexers.detect{|key, value| value[:aliases][0] == gist.lang }[1][:name] %></td>
     <td><%= gist.description %></td>
     <%
