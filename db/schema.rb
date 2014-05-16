@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140426081554) do
 
   create_table "gists", force: true do |t|
+    t.integer  "user_id"
     t.text     "snippet"
     t.string   "lang"
     t.string   "description"
