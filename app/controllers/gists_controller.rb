@@ -33,14 +33,12 @@ class GistsController < ApplicationController
   # POST /gists.json
   def create
     @gist = Gist.new(gist_params)
-    if current_user
-      @gist.user_id = current_user.id
-    end
     captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
 
     respond_to do |format|
       if current_user
         if @gist.save
+            @gist.user_id = current_user.id
             format.html { redirect_to @gist, notice: 'Gist was successfully created.' }
             format.json { render action: 'show', status: :created, location: @gist }
         else
