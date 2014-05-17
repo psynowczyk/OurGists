@@ -34,9 +34,9 @@ class GistsController < ApplicationController
   def create
     @gist = Gist.new(gist_params)
     if current_user
-      @gists.user_id = current_user.id
+      @gist.user_id = current_user.id
     else
-      @gists.user_id = 0
+      @gist.user_id = 0
     end
     captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
 
