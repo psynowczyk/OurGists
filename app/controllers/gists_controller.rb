@@ -37,8 +37,8 @@ class GistsController < ApplicationController
 
     respond_to do |format|
       if current_user
+        @gist.user_id = current_user.id
         if @gist.save
-            @gist.user_id = current_user.id
             format.html { redirect_to @gist, notice: 'Gist was successfully created.' }
             format.json { render action: 'show', status: :created, location: @gist }
         else
