@@ -38,6 +38,10 @@
             </div>
         </div>
     <% end %>
+
+    <% if current_user %>
+        <%= f.hidden_field :user_id, :value => user.id %>
+    <% end %>
     
     <div class="form-group">
         <div class="btn-group btn-group-lg">
