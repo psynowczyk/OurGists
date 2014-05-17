@@ -5,7 +5,7 @@ class GistsController < ApplicationController
   # GET /gists
   # GET /gists.json
   def index
-    @gists = Gist.search(params[:snippet_search],params[:desc_search],params[:lang_search],params[:page])
+    @gists = Gist.search(params[:uid_search],params[:snippet_search],params[:desc_search],params[:lang_search],params[:page])
     respond_to do |format|
        format.html
        format.js
