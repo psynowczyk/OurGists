@@ -35,8 +35,6 @@ class GistsController < ApplicationController
     @gist = Gist.new(gist_params)
     if current_user
       @gist.user_id = current_user.id
-    else
-      @gist.user_id = 0
     end
     captcha_message = "The data you entered for the CAPTCHA wasn't correct. Please try again."
 
