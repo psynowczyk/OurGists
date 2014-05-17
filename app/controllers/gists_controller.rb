@@ -22,6 +22,10 @@ class GistsController < ApplicationController
 
   def private
     @gists = Gist.paginate(:page => params[:page], :per_page => 10, :conditions => ['user_id = ? AND snippet LIKE ? AND description LIKE ? AND lang LIKE ?', current_user.id, "%#{params[:snippet_search]}%", "%#{params[:desc_search]}%", "%#{params[:lang_search]}%"], :order => 'updated_at DESC')
+    respond_to do |format|
+       format.html
+       format.js
+    end
   end
 
   # GET /gists/new
