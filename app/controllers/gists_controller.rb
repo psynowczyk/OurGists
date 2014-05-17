@@ -20,7 +20,7 @@ class GistsController < ApplicationController
   def stats
   end
 
-  def my_gists
+  def private
     #@gists = Gist.search(params[:snippet_search],params[:desc_search],params[:lang_search],params[:page])
   end
 
