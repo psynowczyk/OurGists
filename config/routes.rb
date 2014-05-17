@@ -15,7 +15,7 @@ MyGists::Application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: 'static_pages#login_failed', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
-  get 'gists/mygists', to: 'gists#private', as: 'mygists'
+  get 'gist/mygists', to: 'gists#private', as: 'mygists'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
