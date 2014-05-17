@@ -2,6 +2,12 @@
     <div class="page-header">
         <h1>My gists</h1>
     </div>
+    <div class="form-group">
+        <div class="btn-group btn-group-lg">
+            <%= link_to 'New Gist', new_gist_path, class: 'btn btn-large btn-success' %>
+            <%= content_tag "a", 'Search', class: 'btn btn-large btn-info', "data-toggle" => "collapse", "data-target" => "#view_search" %>
+        </div>
+    </div>
     <div class="form-group collapse" id="view_search">
         <%= form_tag 'gists', :method => 'get' do %>
             <div class="input-group">
