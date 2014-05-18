@@ -15,7 +15,7 @@ class GistsController < ApplicationController
   # GET /gists/1
   # GET /gists/1.json
   def show
-    if @gist.user_id != current_user.id
+    if (current_user && @gist.user_id != current_user.id) || (!current_user && @gist.user_id > 0)
       format.html { redirect_to gists_url, notice: 'You do not have permission to view this directory or page.' }
       format.json { head :no_content }
     end
