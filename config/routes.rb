@@ -3,6 +3,8 @@ MyGists::Application.routes.draw do
   get "static_pages/login_required"
   get "static_pages/login_failed"
   match "gist/stats", to: "gists#stats", via: [:get, :post]
+  match "gist/mygists", to: "gists#private", as: 'mygists', via: [:get, :post]
+  # get 'gist/mygists', to: 'gists#private', as: 'mygists'
   resources :gists
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -15,7 +17,6 @@ MyGists::Application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: 'static_pages#login_failed', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
-  get 'gist/mygists', to: 'gists#private', as: 'mygists'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
