@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="form-group collapse" id="view_search">
-        <%= form_tag 'private', :method => 'get' do %>
+        <%= form_tag 'mygists', :method => 'get' do %>
             <div class="input-group">
                 <span class="input-group-addon">Snippet</span>
                 <%= text_field_tag :snippet_search, params[:snippet_search], class: "form-control", placeholder: "Empty for all characters" %>
