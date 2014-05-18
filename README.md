@@ -9,7 +9,7 @@ Członkowie:
 - Jacek Sikora,
 - Piotr Synowczyk.
 
-Link do działającej aplikacji na Heroku: http://damlab.herokuapp.com
+Link do działającej aplikacji na Shelly Cloud: http://my-gists.shellyapp.com/
 
 Projekt ten jest kontynuacją projektu z zaliczenia laboratoriów (tym razem pracujemy w grupie).
 
@@ -48,15 +48,38 @@ Udział poszczególnych osób można śledzić na remote branchach. Poniżej skr
 * statystyki są zrealizowane za pomocą dwóch gemów:
  - chartkick,
  - groupdate,
-* widok statystyk nie wymaga logowania.
+* widok statystyk nie wymaga logowania,
+* przy pomocy gemu timecop zmodyfikowałem przykładowe rekordy bazy danych (zmanipulowałem wartość atrybutów created_at w celu lepszego zaprezentowania statystyk).
+
+#### Inne
+* Ustawiłem na sztywno (~>) wersje gemów i railsów w pliku Gemfile,
+* do widoku gista dodałem pola z datą utworzenia i modyfikacji gista (data modyfikacja pojawi się tylko wtedy kiedy gist był edytowany),
+* przeniosłem aplikację z Heroku na Shelly Cloud:
+ - pomocny okazał się gem rails_config w celu przechowywania kluczy aplikacji Google, Facebooka, GitHuba oraz reCaptcha.
 
 
 ### Jacek Sikora
--
+* porawiłem kontroler gist_controller.rb (funkcja search przeniesiona do modelu),
+* dodałem walidację pól przy tworzeniu gistów.
 
+#### Testy
+* skonfigurowałem aplikację pod testy:
+ - instalacja gemów: 
+ 	- rspec, 
+ 	- factory_girl,
+ 	- capybara
+ - konfiguracja rspec, factory_girl
+* napisałem testy:
+ - testy modeli: gist.rb, user.rb
+ - testy kontrolera: gists_controller.rb
+* połączyłem aplikacje z Travisem (konfiguracja .travis.yml).
 
 ### Piotr Synowczyk
--
+#### Prywatne gistsy
+* zmieniłem schemat bazy danych (relacja belongs_to, dzięki której gists jest przypisany do użytkownika)
+* dodałem widok dla prywatnych gistsów wraz z wyszukiwarką
+* dodałem zbieżność w routingu pomiędzy adresem "gist/mygists" a akcją "gists#private" w kontrolerze gistsów
+* dodałem zabezpieczenia prywatnych gistsów, dzięki którym tylko właściciel ma dostęp do konkretnego gistsa
 
 
 ## Poprzednie README.md (zaliczenie laboratoriów)
