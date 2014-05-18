@@ -31,7 +31,8 @@
             <div class="btn-group btn-group-lg">
                 <% if current_user %>
                     <%= link_to 'Edit', edit_gist_path(@gist), class: "btn btn-success" %> 
-                    <%= link_to 'Back', gists_path, class: "btn btn-danger" %>
+                    <%= link_to 'Gists list', gists_path, class: "btn btn-danger" %>
+                    <%= link_to 'My gists', mygists_path, class: "btn btn-danger" %>
                     <%= link_to 'Destroy', @gist, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %>
                 <% else %>
                     <%= link_to 'Back', gists_path, class: "btn btn-danger" %>
