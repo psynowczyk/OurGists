@@ -15,7 +15,7 @@ class GistsController < ApplicationController
   # GET /gists/1
   # GET /gists/1.json
   def show
-    if (current_user && @gist.user_id != current_user.id) || (!current_user && @gist.user_id.present?)
+    if (current_user && @gist.user_id != current_user.id) || (current_user && !@gist.user_id.present?) || (!current_user && @gist.user_id.present?)
       redirect_to gists_url
     end
   end
